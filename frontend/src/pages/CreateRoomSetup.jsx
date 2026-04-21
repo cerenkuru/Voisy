@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import voisyLogoNoBg from "../assets/voisylogo-noBg.png";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://localhost:8080";
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://voisy-production.up.railway.app";
 
 function CreateRoomSetup() {
   const navigate = useNavigate();

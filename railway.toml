@@ -1,9 +1,8 @@
 [build]
-builder = "NIXPACKS"
-buildCommand = "cd backend && go build -o server ./cmd"
+builder = "DOCKERFILE"
+dockerfilePath = "backend/Dockerfile"
 
 [deploy]
-startCommand = "cd backend && ./server"
 healthcheckPath = "/health"
 healthcheckTimeout = 120
 restartPolicyType = "ON_FAILURE"

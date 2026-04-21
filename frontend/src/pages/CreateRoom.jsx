@@ -3,7 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import voisyLogoNoBg from "../assets/voisylogo-noBg.png";
 
 const SIGNALING_BASE_URL =
-  import.meta.env.VITE_SIGNALING_BASE_URL || "https://localhost:8080";
+  import.meta.env.VITE_SIGNALING_BASE_URL ||
+  "https://voisy-production.up.railway.app";
 
 const ICE_SERVERS = [{ urls: "stun:stun.l.google.com:19302" }];
 

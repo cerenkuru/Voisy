@@ -25,7 +25,12 @@ func NewWSHandler(manager *room.Manager) *WSHandler {
 // HTTP bağlantısını WebSocket'e upgrade et. OriginPatterns güvenlik için — sadece localhost'tan gelen bağlantıları kabul et.
 func (h *WSHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	conn, err := websocket.Accept(w, r, &websocket.AcceptOptions{
-		OriginPatterns: []string{"localhost:*", "127.0.0.1:*"},
+		OriginPatterns: []string{
+			"localhost:*",
+			"127.0.0.1:*",
+			"voisy.vercel.app",
+			"*.vercel.app",
+		},
 	})
 	if err != nil {
 		return
