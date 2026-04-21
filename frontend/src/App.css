@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Tiny5&display=swap");
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -22,7 +24,9 @@
   border: 1px solid #7f3b04;
   border-radius: 14px;
   padding: 12px 20px;
-  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.3px;
@@ -59,6 +63,15 @@
 .voisy-btn:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.8);
   outline-offset: 3px;
+}
+
+.fredoka-title {
+  font-family: "Fredoka", var(--sans);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-text-stroke: 6px var(--color-secondary);
+  paint-order: stroke fill;
 }
 
 .hero {
