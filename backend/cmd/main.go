@@ -36,6 +36,11 @@ func withCORS(next http.Handler) http.Handler {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	manager := room.NewManager()
 
 	mux := http.NewServeMux()
@@ -48,7 +53,7 @@ func main() {
 	})
 
 	server := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":" + port,
 		Handler: withCORS(mux), // mux'u CORS middleware'ine sar
 	}
 
